@@ -1,10 +1,10 @@
-/*
-function calc(a , b){
+
+/*function calc(a , b){
     let result = a + b;
     return result;
 }
-console.log(result);
-*/
+console.log(result); */
+
 //dans le premier code result is undefined 
 function calc(a , b){
     let result = a + b;
