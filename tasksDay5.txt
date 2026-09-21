@@ -1,0 +1,203 @@
+# Jour 5 — Fonctions et portée : catalogue complet des défis
+
+**Thèmes :** déclaration de fonctions, paramètres, valeurs de retour, réutilisation, fonctions fléchées, portée de bloc, portée de fonction et fermetures lexicales.
+
+## Bases des fonctions
+
+### 1. Fonction d'addition simple — Facile
+**Contexte :** Une fonction reçoit des paramètres, effectue un calcul et retourne une valeur.  
+**Description :** Écris `add(a, b)` qui retourne la somme, puis appelle-la et affiche le résultat.  
+**Exemple de sortie :**
+```text
+5
+```
+
+### 2. Fonction avec un paramètre — Facile
+**Contexte :** Un paramètre est une entrée locale de la fonction.  
+**Description :** Écris `triple(n)` qui retourne `n * 3`.  
+**Exemple de sortie :**
+```text
+15
+```
+
+### 3. Sans `return`, le résultat est `undefined` — Facile
+**Contexte :** `console.log` affiche une valeur mais ne retourne pas cette valeur.  
+**Description :** Crée `logOnly()` qui affiche `"done"` sans retourner de valeur, puis affiche le résultat de son appel.  
+**Exemple de sortie :**
+```text
+done
+undefined
+```
+
+### 4. Paramètre par défaut — Facile
+**Contexte :** Un paramètre par défaut est utilisé lorsqu'un argument manque.  
+**Description :** Écris `greet(name = "guest")` qui retourne un message de salutation.  
+**Exemple de sortie :**
+```text
+Hello, guest
+```
+
+### 5. Fonction qui retourne un booléen — Moyen
+**Contexte :** Une comparaison produit déjà un booléen et peut être retournée directement.  
+**Description :** Écris `isPositive(n)` qui retourne `true` seulement si `n > 0`.  
+**Exemple de sortie :**
+```text
+true
+```
+
+### 6. Fonction avec une boucle — Moyen
+**Contexte :** Les variables déclarées dans une fonction sont locales à cette fonction.  
+**Description :** Écris `sumUpTo(n)` qui retourne la somme des nombres de 1 à `n` avec une boucle.  
+**Exemple de sortie :**
+```text
+sumUpTo(5) → 15
+```
+
+### 7. Une fonction appelle une autre fonction — Moyen
+**Contexte :** Des petites fonctions réutilisables peuvent être combinées pour résoudre un problème plus grand.  
+**Description :** Écris `square(n)`, puis `sumOfSquares(a, b)` qui appelle `square` deux fois.  
+**Exemple de sortie :**
+```text
+sumOfSquares(2, 3) → 13
+```
+
+### 8. Maximum de trois valeurs — Moyen
+**Contexte :** Une fonction peut utiliser des variables locales et des comparaisons pour construire son résultat.  
+**Description :** Écris `maxOfThree(a, b, c)` sans utiliser `Math.max`.  
+**Exemple de sortie :**
+```text
+maxOfThree(4, 9, 2) → 9
+```
+
+### 9. Valider avant de calculer — Difficile
+**Contexte :** Vérifier les entrées dangereuses ou invalides avant de faire une opération.  
+**Description :** Écris `safeDivide(a, b)` qui divise deux valeurs, mais retourne `"Cannot divide by zero"` si `b` vaut zéro.  
+**Exemple de sortie :**
+```text
+safeDivide(10, 0) → Cannot divide by zero
+```
+
+### 10. Refactoriser une logique répétée — Difficile
+**Contexte :** Le code répété doit devenir une fonction réutilisable.  
+**Description :** Remplace plusieurs vérifications entre 1 et 100 par une fonction `isInRange(n)`.  
+**Exemple de sortie :**
+```text
+isInRange(75) → true
+isInRange(120) → false
+```
+
+### 11. Retourner une chaîne formatée — Difficile
+**Contexte :** Une fonction peut combiner plusieurs données dans un format d'affichage réutilisable.  
+**Description :** Écris `formatPrice(name, price)` qui retourne une chaîne comme `"Book: $15"`.  
+**Exemple de sortie :**
+```text
+Book: $15
+```
+
+### 12. Petite boîte à outils de fonctions — Extrême
+**Contexte :** Les fonctions doivent réutiliser une logique existante au lieu de la recopier.  
+**Description :** Crée `isEven(n)`, `isOdd(n)` en utilisant `isEven`, puis `describeParity(n)` qui retourne `"even"` ou `"odd"`.  
+**Exemple de sortie :**
+```text
+describeParity(7) → odd
+```
+
+## Fonctions fléchées et portée
+
+### 13. Convertir en fonction fléchée — Facile
+**Contexte :** Une fonction simple avec une seule expression peut utiliser la syntaxe fléchée.  
+**Description :** Convertis `function double(n) { return n * 2; }` en fonction fléchée.  
+**Exemple de sortie :**
+```text
+double(4) → 8
+```
+
+### 14. Retour implicite — Facile
+**Contexte :** Une fonction fléchée sans accolades retourne automatiquement son expression.  
+**Description :** Écris `isNegative(n)` avec un retour implicite.  
+**Exemple de sortie :**
+```text
+isNegative(-3) → true
+```
+
+### 15. Vérification de portée de bloc — Facile
+**Contexte :** Une variable `let` déclarée entre accolades existe seulement dans ce bloc.  
+**Description :** Déclare `let x = 1` dans `if (true) {}` et détermine si `x` est accessible après le bloc.  
+**Exemple de sortie :**
+```text
+ReferenceError: x is not defined
+```
+
+### 16. Fonction fléchée avec deux paramètres — Facile
+**Contexte :** Plusieurs paramètres d'une fonction fléchée sont placés entre parenthèses.  
+**Description :** Écris `multiply(a, b)` sous forme de fonction fléchée.  
+**Exemple de sortie :**
+```text
+multiply(4, 5) → 20
+```
+
+### 17. Fonction fléchée à plusieurs instructions — Moyen
+**Contexte :** Une fonction fléchée avec plusieurs instructions nécessite des accolades et un `return` explicite.  
+**Description :** Écris `describeAge(age)` qui stocke `"minor"` ou `"adult"` dans une variable locale puis retourne une phrase.  
+**Exemple de sortie :**
+```text
+describeAge(20) → You are a(n) adult
+```
+
+### 18. Prédire une erreur de portée de fonction — Moyen
+**Contexte :** Une variable déclarée dans une fonction est indisponible à l'extérieur.  
+**Description :** Prédire ce qui se passe lorsque `result` est déclaré dans `calc()` mais que `console.log(result)` est appelé hors de `calc()`.  
+**Exemple de sortie :**
+```text
+ReferenceError: result is not defined
+```
+
+### 19. Portée de la variable de boucle — Moyen
+**Contexte :** Une variable `let` déclarée dans une boucle `for` existe seulement dans cette boucle.  
+**Description :** Explique pourquoi `console.log(i)` après `for (let i = 0; i < 5; i++)` provoque une erreur.  
+**Exemple de sortie :**
+```text
+ReferenceError: i is not defined
+```
+
+### 20. Fonction fléchée dans une fonction — Moyen
+**Contexte :** Une fonction peut retourner une autre fonction.  
+**Description :** Écris `makeGreeter()` qui retourne une fonction fléchée; cette fonction retourne `"Hi!"` lorsqu'elle est appelée.  
+**Exemple de sortie :**
+```text
+Hi!
+```
+
+### 21. Réécrire une fonction multi-ligne en fonction fléchée — Difficile
+**Contexte :** Une fonction fléchée peut toujours utiliser des accolades, des conditions et des retours explicites.  
+**Description :** Convertis une fonction `classify(n)` qui retourne `"positive"` ou `"non-positive"` en syntaxe fléchée.  
+**Exemple de sortie :**
+```text
+classify(-2) → non-positive
+```
+
+### 22. Prédire une chaîne de portées — Difficile
+**Contexte :** JavaScript cherche une variable en partant de la portée actuelle vers les portées externes.  
+**Description :** Avec plusieurs blocs imbriqués, explique quelle valeur est utilisée dans le bloc le plus interne lorsqu'il ne redéclare pas la variable.  
+**Exemple de sortie :**
+```text
+La valeur de la portée englobante la plus proche est utilisée.
+```
+
+### 23. Corriger une variable globale accidentelle — Difficile
+**Contexte :** Affecter une variable non déclarée peut créer une variable globale dangereuse en mode non strict.  
+**Description :** Explique et corrige `function setScore(){ score = 100; }`. Déclare ou retourne correctement le score.  
+**Exemple de sortie :**
+```text
+100
+```
+
+### 24. Compteur avec portée privée — Extrême
+**Contexte :** Une fermeture lexicale permet à une fonction retournée de mémoriser une variable de sa fonction externe.  
+**Description :** Écris `makeCounter()` qui retourne une fonction fléchée. Chaque appel doit augmenter et retourner un compteur interne qui commence à zéro.  
+**Exemple de sortie :**
+```text
+counter() → 1
+counter() → 2
+counter() → 3
+```
